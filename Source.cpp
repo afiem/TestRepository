@@ -2,15 +2,15 @@
 
 using namespace std;
 
-int factorial(int x, int cum ,int i) {
+int factorial(int x, int num ,int i) {
 	if (x>=i) {
-		cum *= i;
+		num *= i;
 		i++;
-		factorial(x,cum,i);
+		factorial(x,num,i);
 	}
 	else
 	{
-		return cum;
+		return num;
 	}
 }
 
