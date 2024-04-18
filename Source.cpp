@@ -2,21 +2,28 @@
 
 using namespace std;
 
-int factorial(int x, int num ,int i) {
+int factorial(int x, int cum ,int i) {
 	if (x>=i) {
-		num *= i;
+		cum *= i;
 		i++;
-		factorial(x,num,i);
+		factorial(x,cum,i);
 	}
 	else
 	{
-		return num;
+		return cum;
 	}
 }
 
 
-void main() {
+int main() {
+	
 	int number;
-	cin >> number;
-	cout << factorial(number,1,1);
+	do
+	{	cin >> number;
+			
+		if (number == 0)  return 0;
+		else cout << factorial(number, 1, 1);
+		
+	} while (true);
+	
 }
